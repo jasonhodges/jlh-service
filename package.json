@@ -4,6 +4,13 @@
 	"dependencies" : {
 		"express" : "14.13.3"
 	},
+	"engines": {
+    "node": "0.12.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jasonhodges/jlh-service"
+  },
 	"keywords": [
     "node",
     "heroku",
