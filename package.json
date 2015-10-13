@@ -1,0 +1,13 @@
+{
+	"name" : "hello-service",
+	"version" : "0.0.1",
+	"dependencies" : {
+		"express" : "14.13.3"
+	},
+	"keywords": [
+    "node",
+    "heroku",
+    "express"
+  ],
+  "license": "MIT"
+}
