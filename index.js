@@ -1,23 +1,25 @@
-var express = require('express');
-var app = express();
+var express = require('express')
+  , cors = require('cors')
+  , app = express();
+  
+app.use(cors());
+// var allowCrossDomain = function(req, res, next) {
+//     res.header('Access-Control-Allow-Origin', '*');
+//     res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+//     res.header('Access-Control-Allow-Headers', 'X-Requested-With, Accept, Origin, Referer, User-Agent, Content-Type, Authorization, Content-Length');
 
-var allowCrossDomain = function(req, res, next) {
-    res.header('Access-Control-Allow-Origin', '*');
-    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
-    res.header('Access-Control-Allow-Headers', 'X-Requested-With, Accept, Origin, Referer, User-Agent, Content-Type, Authorization, Content-Length');
-
-    // intercept OPTIONS method
-    if ('OPTIONS' == req.method) {
-      res.send(200);
-    }
-    else {
-      next();
-    }
-};
-app.configure(function(){
-  app.use(allowCrossDomain);
-  app.use(app.router);
-});
+//     // intercept OPTIONS method
+//     if ('OPTIONS' == req.method) {
+//       res.send(200);
+//     }
+//     else {
+//       next();
+//     }
+// };
+// app.configure(function(){
+//   app.use(allowCrossDomain);
+//   app.use(app.router);
+// });
 
 
 var db = require('./db.json');
